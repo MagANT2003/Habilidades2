@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style type="text/css">
+        body {
+            background-image: url('images/img2.jpeg'); /* URL de la imagen de fondo */
+            background-size: 2000px; /* La imagen cubrirá todo el fondo */
+            background-attachment: fixed; /* La imagen permanecerá fija al hacer scroll */
+            background-position: center; /* Centrar la imagen */
+            background-repeat: no-repeat; /* No repetir la imagen */
+        }
+        .profile-img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .about {
+            font-size: 1.1rem;
+        }
+        .icon {
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+        .contact-info, .education-info {
+            margin-bottom: 20px;
+        }
+        /* Fondo semitransparente para mejorar la legibilidad */
+        .container {
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Columna izquierda: Imagen y contacto -->
+            <div class="col-md-4 text-center">
+                <img src="images/img1.png" alt="Avatar" class="profile-img" />
+                <h3>#{habilidades.nombre}</h3>
+                <p>Estudiante</p>
+                <div class="contact-info">
+                    <p><i class="bi bi-envelope icon"></i>#{habilidades.correo}</p>
+                    <p><i class="bi bi-telephone icon"></i>#{habilidades.celular}</p>
+                    <p><i class="bi bi-geo-alt icon"></i>#{habilidades.direccion}</p>
+                </div>
+            </div>
+            <!-- Columna derecha: Sobre mí y Educación -->
+            <div class="col-md-8">
+                <h2>Experiencia en</h2>
+                <p class="about">
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.
+                </p>
+                <div class="row">
+                    <div class="col-md-4 education-info">
+                        <h5>Proyectos Realizados</h5>
+                        <p>University of lorem ipsum, focus on IT and Engineering</p>
+                    </div>
+                    <div class="col-md-4 education-info">
+                        <h5>Certificados</h5>
+                        <a href="certificados.xhtml" class="btn btn-primary">Ver Certificados</a>
+                    </div>
+                    <div class="col-md-4 education-info">
+                        <h5>habilidades</h5>
+                        <p>About 20 years of experience and professional in Signage</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+</body>
+</html>

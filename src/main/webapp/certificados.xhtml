@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificados Obtenidos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style type="text/css">
+        body {
+            background-image: url('images/img2.jpeg'); /* URL de la imagen de fondo */
+            background-size: 2000px; /* La imagen cubrirá todo el fondo */
+            background-attachment: fixed; /* La imagen permanecerá fija al hacer scroll */
+            background-position: center; /* Centrar la imagen */
+            background-repeat: no-repeat; /* No repetir la imagen */
+        }
+        /* Estilos para centrar el título en la parte superior */
+        .title-container {
+            display: flex;
+            justify-content: center; /* Centrar horizontalmente */
+            padding-top: 20px; /* Espacio desde la parte superior */
+        }
+
+        /* Estilos para el título principal */
+        h2 {
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco translúcido */
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Estilos para las imágenes */
+        .img-container {
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+            margin: 20px;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .img-container:hover img {
+            transform: scale(1.1); /* Zoom en hover */
+        }
+
+        /* Mini título */
+        .img-title {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-size: 1.1rem;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .img-container:hover .img-title {
+            opacity: 1;
+        }
+
+        /* Estilos para la ventana modal que expande la imagen */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .modal-content {
+            -webkit-animation: zoom 0.6s;
+            animation: zoom 0.6s;
+        }
+
+        @-webkit-keyframes zoom {
+            from { -webkit-transform: scale(0); }
+            to { -webkit-transform: scale(1); }
+        }
+
+        @keyframes zoom {
+            from { transform: scale(0); }
+            to { transform: scale(1); }
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Alinear imágenes en el centro */
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <!-- Contenedor para centrar el título en la parte superior -->
+    <div class="title-container">
+        <h2>CERTIFICADOS OBTENIDOS</h2>
+    </div>
+
+    <div class="container mt-5">
+        <div class="image-gallery">
+            <div class="img-container">
+                <img src="images/imagen1.png" alt="Certificado 1" onclick="expandImage(this);" />
+                <div class="img-title">Certificado 1</div>
+            </div>
+            <div class="img-container">
+                <img src="images/imagen2.png" alt="Certificado 2" onclick="expandImage(this);" />
+                <div class="img-title">Certificado 2</div>
+            </div>
+            <div class="img-container">
+                <img src="images/imagen3.png" alt="Certificado 3" onclick="expandImage(this);" />
+                <div class="img-title">Certificado 3</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para expandir la imagen -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="expandedImg" alt="Imagen Expandida" />
+    </div>
+
+    <script type="text/javascript">
+        /* Función para expandir la imagen */
+        function expandImage(img) {
+            var modal = document.getElementById("imageModal");
+            var expandedImg = document.getElementById("expandedImg");
+            modal.style.display = "block";
+            expandedImg.src = img.src;
+        }
+
+        /* Función para cerrar el modal */
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
